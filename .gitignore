@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Large local data and generated products
+data/*.zarr/
+data/seas5_forcing/
+runs/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/

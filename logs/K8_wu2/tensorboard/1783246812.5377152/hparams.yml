@@ -1,0 +1,63 @@
+batch_size: 1
+cache_days: 10
+cache_dtype: float16
+checkpoint: 'off'
+compile: 'on'
+compile_mode: default
+data_dir: /share/tmp/dataset_final.zarr
+ema: 'on'
+ema_decay: 0.999
+ema_start_steps: 0
+epochs: 100
+exclude_state_vars: '["usi", "vsi"]'
+forcing_input_mode: atm_norm
+gamma: 1.0
+grad_accum_steps: 1
+grad_clip: 1.0
+hope_c: 2
+hope_t: 2
+ice_velocity_loss_mult: 0.5
+init_ckpt: /share/geosat-4/atmospheric_profile/ocean/run_fin/hope_rolloutK4_wu1_0617_ema_only/checkpoints/epoch_0100.pt
+init_ckpt_state: ema_model
+lat_weight_floor: 0.2
+load_optim_from_init: 'off'
+lr: 0.0001
+memo: 0617_ema_only
+minmax_m11_vars: '[]'
+minmax_res_m11_vars: '[]'
+minmax_vars: '["siconc", "sithick", "zos", "thetao", "so"]'
+norm_csv: /share/geosat-4/atmospheric_profile/ocean/data/norm_table_0617/stats_final_no_flux_19930101_20171231.csv
+norm_res_csv: /share/geosat-4/atmospheric_profile/ocean/data/norm_table/stats_res_1993_2017.csv
+num_workers: 8
+ocean_current_loss_mult: 1
+out_root: /share/geosat-4/atmospheric_profile/ocean/run_fin
+polar_ice_loss_mult: 1.0
+polar_weight_vars: '["siconc", "sithick", "usi", "vsi"]'
+precision: bf16
+resume_ckpt: latest
+rollout_days: 8
+save_every: 5
+seed: 42
+siconc_loss_mult: 1.0
+sithick_loss_mult: 2.0
+so_loss_mult: 10.0
+symm_scale_vars: '["usi", "vsi", "uo", "vo"]'
+thetao_loss_mult: 5.0
+three_d_loss_mult: 1.0
+three_d_loss_vars: '["thetao", "uo", "vo", "so"]'
+train_end: '201712310000'
+train_start: '199301010000'
+uo_loss_mult: 1
+use_latitude_weight: 'on'
+use_ocean_mask: 'on'
+use_y_clamp: 'off'
+usi_loss_mult: 0.5
+val_end: '201912310000'
+val_start: '201801010000'
+var_balance_power: 0.0
+vo_loss_mult: 1
+vsi_loss_mult: 0.5
+warmup_days: 2
+weight_decay: 0.01
+zarr_consolidated: true
+zos_loss_mult: 1.5

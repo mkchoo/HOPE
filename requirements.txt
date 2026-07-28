@@ -1,0 +1,11 @@
+torch>=2.1
+accelerate>=0.27
+numpy>=1.24
+pandas>=2.0
+xarray>=2023.1
+zarr>=2.16
+numcodecs>=0.12
+netCDF4>=1.6
+tqdm>=4.65
+tensorboard>=2.14
+timm>=0.9
