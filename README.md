@@ -33,8 +33,6 @@ The model has one released configuration:
 - two low-level updates per cycle and two high-level cycles;
 - latitude positional encoding, recurrent `zL/zH`, and a residual state head.
 
-`usi` and `vsi` are not part of this experiment.
-
 ## Install
 
 ```bash
@@ -136,5 +134,5 @@ files, scalar CSVs, and `training_summary.csv`.
 tensorboard --logdir logs
 ```
 
-The final model was optimized on eight-day rollouts. A 215-day run is therefore
+The final model was optimized on eight-day rollouts. A 180-day run is therefore
 autoregressive extrapolation beyond the training horizon.
